@@ -1,6 +1,6 @@
 # MyResume
 **MyResume** is an Angular SPA resume site.
-The design implements a simple responsive bootstrap site for a resume site.
+The design implements a simple responsive bootstrap site for a resume site. The site is inspired from the start bootstrap theme https://github.com/startbootstrap/startbootstrap-resume.
 Data and design are decoupled into seperate angular components.
 
 ## Project Requirements & Setup
