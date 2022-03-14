@@ -1,0 +1,26 @@
+<app-navbar [mobileNavbar]="true"></app-navbar>
+
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark d-none d-lg-block">
+            <app-navbar [mobileNavbar]="false"></app-navbar>
+        </div>
+        <div class="col py-3">
+            <div class="container-fluid">
+                <app-about></app-about>
+                <hr class="m-0" />
+                <!-- Experience-->
+                <app-experience></app-experience>
+                <hr class="m-0" />
+                <!-- Skills-->
+                <app-skills></app-skills>
+                <hr class="m-0" />
+                <!-- Education-->
+                <app-education></app-education>
+                <hr class="m-0" />
+                <!-- Interests-->
+                <app-interests></app-interests>
+            </div>
+        </div>
+    </div>
+</div>
