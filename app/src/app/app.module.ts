@@ -19,7 +19,7 @@ import { ShareModule } from './share/share.module';
     BrowserModule,
     ReactiveFormsModule,
 
-    ToastrModule,
+    ToastrModule.forRoot(),
     ModalModule.forRoot(),
     
     ShareModule,
