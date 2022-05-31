@@ -1,0 +1,59 @@
+
+<!-- Mobile -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="sideNav"
+    [ngClass]="mobileNavbar ? 'd-lg-none d-md-block px-4' : 'd-none d-lg-block'">
+    
+    <a class="navbar-brand" href="#">
+        <img src="https://via.placeholder.com/150?text=KZY" alt="..." class="img-thumbnail rounded-circle mx-auto d-block" *ngIf="!mobileNavbar">
+    </a>
+    <button class="navbar-toggler" type="button" (click)="toggle()" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive" [collapse]="isCollapsed" [isAnimated]="true">
+        <ul class="navbar-nav w-100 d-flex flex-column">
+          <li class="nav-item text-center">
+              <a class="nav-link" [routerLink]="['']" routerLinkActive="active-link">
+                  <h3>Home</h3>
+              </a>
+          </li>
+          <li class="nav-item text-center">
+              <a class="nav-link" [routerLink]="['projects']" routerLinkActive="active-link">
+                  <h3>Projects</h3>
+              </a>
+          </li>
+          <!-- <li class="nav-item text-center">
+            <button type="button" class="btn btn-link nav-link mx-auto" (click)="openContactModal(template)">
+                <h3>Contact Me</h3>
+            </button>
+          </li> -->
+        </ul>
+    </div>
+</nav>
+
+<!-- Contact Us Modal -->
+<ng-template #template>
+    <form [formGroup]="form">
+        <div class="modal-header bg-dark text-white">
+            <h4 class="modal-title pull-left">Contact Me</h4>
+            <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="bsModalRef?.hide()">
+                <span aria-hidden="true" class="visually-hidden">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="emal">Email Address</label>
+                <input type="email" class="form-control" id="emal" formControlName="email" />
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" formControlName="message"></textarea>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </div>
+    </form>
+  </ng-template>
+
+
+

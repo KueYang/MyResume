@@ -1,0 +1,21 @@
+<div class="card">
+    <h4 class="card-header">{{title}}</h4>
+    <div class="card-body">
+        <p>{{summary}}</p>
+        <p>
+            <a [href]="link"
+                *ngIf="link">{{link}}</a>
+        </p>
+        <div>
+            <h6>Duties & Responsibilities:</h6>
+            <ul>
+                <li *ngFor="let duty of duties">{{duty}}</li>
+            </ul>
+        </div>
+        <p class="pt-2" 
+            *ngIf="tags">
+            <span class="bg-secondary badge badge-secondary mx-1"
+                *ngFor="let tag of tags">{{tag}}</span>
+        </p>
+    </div>
+</div>
