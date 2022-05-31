@@ -1,0 +1,26 @@
+<section class="py-4" id="skills">
+    <div class="resume-section-content">
+        <h2 class="mb-3">Skills</h2>
+
+        <h4 class="subheading mb-2">Framework & Tools</h4>
+        <ul class="list-inline dev-icons">
+            <li *ngFor="let icon of frameworksAndLibs" class="list-inline-item p-2"><fa-icon [icon]="icon" [size]="'4x'"></fa-icon></li>
+        </ul>
+
+        <h4 class="subheading mb-2">Languages</h4>
+        <ul class="list-inline dev-icons">
+        </ul>
+        <ul class="fa-ul">
+            <li *ngFor="let language of languages">
+                <fa-icon [icon]="faKeyboard" [size]="'1x'"></fa-icon> <span class="ms-2">{{language}}</span>
+            </li>
+        </ul>
+
+        <h4 class="subheading mb-2">Workflow</h4>
+        <ul class="fa-ul mb-0">
+            <li *ngFor="let work of workflows">
+                <fa-icon [icon]="faCheckSquare" [size]="'1x'"></fa-icon> <span class="ms-2">{{work}}</span>
+            </li>
+        </ul>
+    </div>
+</section>
